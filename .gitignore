@@ -1,0 +1,31 @@
+**/lical_env38
+**/lical_env
+*.las
+*.laz
+*.prj
+*.pyc
+*.byn
+*.err
+*.xml
+*.log
+*.gpkg
+*.csv
+*.pdf
+*.json
+**/test_files
+**/__pycache__
+.vscodemkjj
+**/*.rar
+**/*.exe
+*lidar_read_errors.txt
+.idea
+**/*.egg-info/
+build/
+lidar_program/Eclipse/data/**
+
+# Natalie's global .gitignore items:
+**/sandbox*
+virtual_environments_natalie/
+
+# pattern negations
+!rsge_lidar_specs.json
