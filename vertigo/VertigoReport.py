@@ -1,22 +1,21 @@
 # specific lib functions
-from reportlab.lib.styles import getSampleStyleSheet
-from reportlab.lib.utils import ImageReader
-from reportlab.platypus import Table, TableStyle, Paragraph, Spacer
-from reportlab.lib.pagesizes import letter
-from reportlab.lib.units import inch
-from reportlab.pdfgen import canvas
 from reportlab.lib import colors
+from reportlab.pdfgen import canvas
+from reportlab.lib.units import inch
+from reportlab.lib.pagesizes import letter
+from reportlab.lib.utils import ImageReader
+from reportlab.lib.styles import getSampleStyleSheet
+from reportlab.platypus import Table, TableStyle, Paragraph, Spacer
 
 # system libs
 import os
 import io
-import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
 
 # user libs
-from rsge_toolbox.util.time_tools import today_str
 from Vertigo import Vertigo
+from rsge_toolbox.util.time_tools import today_str
 
 
 DISCLAIMER_TEXT = (
@@ -139,13 +138,11 @@ class VertigoReport:
         :param title: Title to be drawn at the top of the PDF.
         """
 
-
         # =======================================================
         # First Page
         # =======================================================
 
         # Create a new PDF canvas with the specified page size
-        c = canvas.Canvas(self._name, pagesize=letter)
         c = canvas.Canvas(self._name, pagesize=letter)
 
         # draw main page and summary information
